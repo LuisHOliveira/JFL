@@ -1,31 +1,25 @@
 class Variaveis{
-	private String []v;
+	private String []nome;
+	private int y;
 	
-	public int declaraVariavel(String vet[],int posicao){
-		this.v=vet;
-		int i;
-		double r;
+	public void declaraVariavel(String vet[],int posicao){
 		
-		if(v[posicao]=="INTEIRO"){
-			i=posicao;
-			return posicao;
+		this.nome=vet;
+		int []i;
+		double []r;
+		int x;
+		char ascii=122;
+		
+		while(nome[posicao].equals("INTEIRO") && nome[posicao] != (" ")){
+				posicao ++;
 		}
-		else{
-			posicao++;
-			
-		}
-		if(v[posicao]=="RACIONAL"){
-			r=posicao;
-			return posicao;
-		}
-		else{
-			posicao++;
+		
+		for(x=97;x<ascii;x++){
+			if(nome[posicao].equals(x)){
+					
+			}
 			
 		}
 		
-		return posicao;
-	
 	}
-
-	
 }

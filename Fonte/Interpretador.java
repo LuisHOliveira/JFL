@@ -2,50 +2,54 @@
 class Interpretador {
     
     private String linhas[];
-    private String tokens []= new String[1000];
+    private String tokens []= new String[40000];
     private int i;
     private int j;
     
-    Variaveis n=new Variaveis();
-    
-    
+     Variaveis n=new Variaveis();
+      
     public void interpreta(String l[]) {
-        this.linhas = l;
+		this.linhas = l;
         
         for(i=0;i<this.linhas.length;i++){
 			
-			String tokens[]=linhas[i].split(" ");
-			
-			if(this.tokens[i] != null){
-					if(this.tokens[i]=="INTEIRO"){
-						
-						System.out.println("entrou, ok!");
-					//	n.declaraVariavel(linhas,j);
+			if(this.linhas[i] != null){
+				String tokens[]=linhas[i].split(" ");
+				
+				for(j=0;j<tokens.length;j++){
+					System.out.println(tokens[j]);
+					
+					if(tokens[j].equals("INTEIRO")){
+						n.declaraVariavel(tokens,j);
 					}
-					if(this.linhas[j]=="RACIONAL"){
+					
+					if(tokens[j].equals("RACIONAL")){
+						System.out.println("entrou, ok!");
 						//this.linhas.declaraVariavel(linhas,j);
 					}
-					if(this.linhas[j]=="+"){
-//						this.linhas.soma();
+					if(tokens[j].equals("+")){
+						System.out.println("entrou, ok!soma");
+						//this.linhas.soma();
 					}
-					if(this.linhas[j]=="-"){
-	//					this.linhas.sub();
+					if(tokens[j].equals("-")){
+						System.out.println("entrou, ok!sub");
+						//this.linhas.sub();
 						
 					}
 					if(this.linhas[j]=="*"){
-					//	this.linhas.multi();
+						//this.linhas.multi();
 						
 					}
 					if(this.linhas[j]=="/"){
-				 //		this.linhas.div();	
+						//this.linhas.div();	
 						
 					}
 					if(this.linhas[j]=="MS"){
-				//		this.linhas.mostraSaida();
+						//this.linhas.mostraSaida();
 					}
-
 				}
-			
 			}
 		}
 	}
+}
+
