@@ -8,13 +8,17 @@ class Interpretador {
     
      Variaveis n=new Variaveis();
       
+    public String[] getLinhas(){
+		return this.linhas;
+		}
+		
     public void interpreta(String l[]) {
 		this.linhas = l;
         
         for(i=0;i<this.linhas.length;i++){
 			
 			if(this.linhas[i] != null){
-				String tokens[]=linhas[i].split(" ");
+				String tokens[]=linhas[i].split("[\\s\\.,]+");
 				
 				for(j=0;j<tokens.length;j++){
 					System.out.println(tokens[j]);
@@ -36,15 +40,18 @@ class Interpretador {
 						//this.linhas.sub();
 						
 					}
-					if(this.linhas[j]=="*"){
+					if(tokens[j].equals("*")){
+						System.out.println("entrou, ok!mult");
 						//this.linhas.multi();
 						
 					}
-					if(this.linhas[j]=="/"){
+					if(tokens[j].equals("/")){
+						System.out.println("entrou, ok!div");
 						//this.linhas.div();	
 						
 					}
-					if(this.linhas[j]=="MS"){
+					if(tokens[j].equals("MS")){
+						System.out.println("entrou, ok!MostraSaida");
 						//this.linhas.mostraSaida();
 					}
 				}
