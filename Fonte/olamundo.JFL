@@ -1,14 +1,14 @@
 INTEIRO a,
 
-INTEIRO 3,
+INTEIRO b,
 
-INTEIRO olamundo,
-
-RACIONAL frac2ao,
-
+INTEIRO 2,
 +
 -
 /
 *
-MS
+
+MS "ola mundo",
+
+
     

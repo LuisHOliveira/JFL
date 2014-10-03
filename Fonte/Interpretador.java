@@ -2,15 +2,21 @@
 class Interpretador {
     
     private String linhas[];
-    private String tokens []= new String[40000];
+    private String tokens []= new String[4000];
     private int i;
     private int j;
+    private int pos=0;
     
-     Variaveis n=new Variaveis();
+     Variaveis []n= new Variaveis[4000];
      //Instancia um objeto Variavel
-      
+     
       
     public void interpreta(String l[]) {
+		
+		for(i=0;i<n.length;i++){
+			n[i]= new Variaveis();
+			}
+	
 		this.linhas = l;
 		//recebe a string a ser interpretada
         
@@ -27,13 +33,23 @@ class Interpretador {
 					System.out.println(tokens[j]);
 					
 					if(tokens[j].equals("INTEIRO")){
-						n.testaVariavel(tokens,j);
-					}
+						pos=n[j].testaVariavel(tokens,j);
+						
+						if(pos != -1){
+							System.out.println("ok :)");
+							n[j].declaraVariavelInt(tokens,pos);
+						}
+					} 
 					
 					if(tokens[j].equals("RACIONAL")){
-						n.testaVariavel(tokens,j);
+						pos=n[j].testaVariavel(tokens,j);
+						
+						if(pos != -1){
+							System.out.println("ok :)");
+							n[j].declaraVariavelInt(tokens,pos);
+						}
 					}
-					
+
 					if(tokens[j].equals("+")){
 						System.out.println("entrou, ok!soma");
 						//this.linhas.soma();
