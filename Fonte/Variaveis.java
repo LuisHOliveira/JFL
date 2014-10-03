@@ -9,24 +9,22 @@ class Variaveis{
 		double []r;
 		int []x;
 		
-		while(nome[posicao].equals("INTEIRO") && nome[posicao] != (" ")){
+		while(nome[posicao].equals("INTEIRO") || nome[posicao].equals("RACIONAL") 
+		&& nome[posicao] != (" ")){
 				posicao ++;
-		}
+		} 
+		//recebida a string,
+		//verifica o tipo de variavel e se seu nome e valido
 		
 		for(i=0;i<nome[posicao].length();i++){
-				
-				if(Character.isLetter(nome[posicao].charAt(i))==true){
-					System.out.println("variavel valida");
-				}
-				else{
-					System.out.println("variavel nao valida");	
+			if(Character.isLetter(nome[posicao].charAt(i))==true){
+					System.out.println("caract valido para var");
 					
-				}
-			
-		}
-		
-		
-			
-		}
-		
+				}else{
+					System.out.println("variavel nao valida");	
+					break;
+				}		
+		}			
 	}
+		
+}

@@ -7,20 +7,23 @@ class Interpretador {
     private int j;
     
      Variaveis n=new Variaveis();
+     //Instancia um objeto Variavel
       
-    public String[] getLinhas(){
-		return this.linhas;
-		}
-		
+      
     public void interpreta(String l[]) {
 		this.linhas = l;
+		//recebe a string a ser interpretada
         
         for(i=0;i<this.linhas.length;i++){
+			//Percorre linha por linha da string recebida
 			
 			if(this.linhas[i] != null){
 				String tokens[]=linhas[i].split("[\\s\\.,]+");
+				//separa a string linhas pela qnte de espaços 
+				//em um novo vetor de strings
 				
 				for(j=0;j<tokens.length;j++){
+					// Percorre as "novas" strings
 					System.out.println(tokens[j]);
 					
 					if(tokens[j].equals("INTEIRO")){
@@ -28,9 +31,9 @@ class Interpretador {
 					}
 					
 					if(tokens[j].equals("RACIONAL")){
-						System.out.println("entrou, ok!");
-						//this.linhas.declaraVariavel(linhas,j);
+						n.testaVariavel(tokens,j);
 					}
+					
 					if(tokens[j].equals("+")){
 						System.out.println("entrou, ok!soma");
 						//this.linhas.soma();
