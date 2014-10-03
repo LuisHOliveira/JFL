@@ -24,7 +24,7 @@ class Interpretador {
 					System.out.println(tokens[j]);
 					
 					if(tokens[j].equals("INTEIRO")){
-						n.declaraVariavel(tokens,j);
+						n.testaVariavel(tokens,j);
 					}
 					
 					if(tokens[j].equals("RACIONAL")){

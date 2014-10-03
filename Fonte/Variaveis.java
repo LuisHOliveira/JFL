@@ -2,24 +2,31 @@ class Variaveis{
 	private String []nome;
 	private int y;
 	
-	public void declaraVariavel(String vet[],int posicao){
+	public void testaVariavel(String vet[],int posicao){
 		
 		this.nome=vet;
-		int []i;
+		int i;
 		double []r;
-		int x;
-		char ascii=122;
+		int []x;
 		
 		while(nome[posicao].equals("INTEIRO") && nome[posicao] != (" ")){
 				posicao ++;
 		}
 		
-		for(x=97;x<ascii;x++){
-			if(nome[posicao].equals(x)){
+		for(i=0;i<nome[posicao].length();i++){
+				
+				if(Character.isLetter(nome[posicao].charAt(i))==true){
+					System.out.println("variavel valida");
+				}
+				else{
+					System.out.println("variavel nao valida");	
 					
-			}
+				}
+			
+		}
+		
+		
 			
 		}
 		
 	}
-}
