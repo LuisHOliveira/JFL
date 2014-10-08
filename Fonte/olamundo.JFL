@@ -1,6 +1,6 @@
 INTEIRO a,
 
-INTEIRO b,
+INTEIRO abc234,
 
 INTEIRO 2,
 +
@@ -8,7 +8,7 @@ INTEIRO 2,
 /
 *
 
-MS "ola mundo",
+MS    "    ola    mundo   "   ,
 
 
     

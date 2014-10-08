@@ -34,15 +34,13 @@ class Variaveis{
 		
 		for(i=0;i<nome[posicao].length();i++){
 			
-			if(Character.isLetter(nome[posicao].charAt(i))==true){
-					System.out.println("caract valido para var");
-						
-				}else{
-					System.out.println("variavel nao valida");	
-					posicao=-1;
-					
-					break;
-				}						
+			if(Character.isLetter(nome[posicao].charAt(i))==false){
+				
+				System.out.println("variavel nao valida");
+				posicao=-1;
+			
+				break;
+			}						
 		}	
 		return posicao;		
 	}
