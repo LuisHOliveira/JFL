@@ -10,12 +10,9 @@ class Interpretador {
      Variaveis []n= new Variaveis[4000];
      //Instancia um objeto Variavel
      
-      
-    public void interpreta(String l[]) {
-		
-		for(i=0;i<n.length;i++){
-			n[i]= new Variaveis();
-			}
+     public void interpreta(String l[]) {
+		 
+		 n[0]=new Variaveis();
 	
 		this.linhas = l;
 		//recebe a string a ser interpretada
@@ -33,20 +30,20 @@ class Interpretador {
 					System.out.println(tokens[j]);
 					
 					if(tokens[j].equals("INTEIRO")){
-						pos=n[j].testaVariavel(tokens,j);
+						pos=n[0].testaVariavel(tokens,j);
 						
 						if(pos != -1){
 							System.out.println("ok :)");
-							n[j].declaraVariavelInt(tokens,pos);
+							n[0].declaraVariavelInt(tokens,pos);
 						}
 					} 
 					
 					if(tokens[j].equals("RACIONAL")){
-						pos=n[j].testaVariavel(tokens,j);
+						pos=n[0].testaVariavel(tokens,j);
 						
 						if(pos != -1){
 							System.out.println("ok :)");
-							n[j].declaraVariavelInt(tokens,pos);
+							n[0].declaraVariavelInt(tokens,pos);
 						}
 					}
 
